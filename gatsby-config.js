@@ -3,5 +3,15 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Photofee",
   },
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
+      }
+    },
+  ],
 };
