@@ -42,9 +42,21 @@ nav .nav-container {
 /* Hero section */
 
 .hero-section {
-  height: 70vh;
+  height: 75vh;
+  width: 100%;
+  background-color: burlywood;
 }
 
-.hero-img {
-  height: 50px;
+.hero-1 {
+  display: none;
+}
+
+@keyframes fadeImg {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
