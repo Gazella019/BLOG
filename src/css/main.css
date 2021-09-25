@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Allison&family=Asul&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allison&family=Asul2&family=Cardo&family=Cormorant+Garamond:ital,wght@1,300&display=swap");
 
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -42,34 +44,81 @@ nav .nav-container {
 /* Hero section */
 
 .hero-section {
-  height: 75vh;
+  height: 80vh;
   width: 100%;
 }
 .hero-card {
   height: 75vh;
   width: 100%;
   position: relative;
-  background: linear-gradient(#dad8dd, #000000);
   z-index: 1;
 }
-.hero-img {
+.hero-img-1 {
   /* position: absolute; */
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), transparent),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), transparent),
     url("../assets/hero-img-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  /* animation: fadeImg 1.5s ease-in-out forwards; */
+}
+
+.hero-img-2 {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), transparent),
+    url("../assets/hero-img-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* animation: fadeImg 1.5s ease-in-out forwards; */
+}
+
+.hero-img-3 {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), transparent),
+    url("../assets/hero-img-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* animation: fadeImg 1.5s ease-in-out forwards; */
 }
 
 .hero-description {
   position: absolute;
   width: 400px;
-  color: rgb(66, 59, 59);
-  background-color: blueviolet;
+  color: rgb(255, 255, 255);
   left: 70px;
-  bottom: 150px;
+  bottom: 100px;
+  font-family: "Cardo", serif;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.hero-description p {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.hero-description .title {
+  font-size: 3rem;
+  font-weight: 100;
+  position: relative;
+}
+
+.divider {
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  border-radius: 10px;
+  background-color: rgb(236, 232, 240);
+  bottom: 10px;
+  z-index: 2;
 }
 
 .hero-item-left {
@@ -92,12 +141,6 @@ nav .nav-container {
   top: 50%;
 }
 
-.divider {
-  width: 60px;
-  height: 5px;
-  border-radius: 10px;
-  background-color: red;
-}
 @keyframes fadeImg {
   from {
     opacity: 0;
@@ -106,4 +149,74 @@ nav .nav-container {
   to {
     opacity: 1;
   }
+}
+
+/* About section */
+
+.about-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80vh;
+}
+
+.about-text-section h1 {
+  padding: 30px;
+}
+.about-text-section {
+  flex: 1 1 40rem;
+  background-color: #faf7f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 100;
+}
+
+.about-img-section {
+  flex: 1 1 40rem;
+  background-color: #df9e89;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-img {
+  border-radius: 10px;
+}
+
+.about-img::after {
+  content: "";
+  position: absolute;
+  /* top: -20px;
+  right: -20px; */
+  height: 6rem;
+  width: 100%;
+  background-color: cornflowerblue;
+  transform: translateX(50px%);
+  /* z-index: -1; */
+}
+
+/* Blog section */
+.blog-section {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-title {
+  font-size: 4.2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: -10px;
+  left: 25px;
+  background: black;
 }
