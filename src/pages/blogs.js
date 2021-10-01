@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import ExampleCard from "../components/BlogCards/ExampleCard";
 import { graphql } from "gatsby";
+import styled from "styled-components";
 
 const blogs = ({ data }) => {
   const {
@@ -10,9 +11,11 @@ const blogs = ({ data }) => {
   console.log(blogs);
   return (
     <Layout>
-      {blogs.map((blog) => {
-        return <ExampleCard key={blog.id} {...blog} />;
-      })}
+      <Wrapper>
+        {blogs.map((blog) => {
+          return <ExampleCard key={blog.id} blog={blog} />;
+        })}
+      </Wrapper>
     </Layout>
   );
 };
@@ -39,4 +42,7 @@ export const query = graphql`
   }
 `;
 
+const Wrapper = styled.section`
+  padding: 100px;
+`;
 export default blogs;

@@ -4,8 +4,8 @@ import { FaRegClock } from "react-icons/fa";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-const ExampleCard = ({ frontmatter }) => {
-  const { category, title, image, date, slug } = frontmatter;
+const ExampleCard = ({ blog }) => {
+  const { category, title, image, date, slug } = blog.frontmatter;
   return (
     <Wrapper>
       <GatsbyImage image={getImage(image)} alt={title} className="img" />
@@ -20,7 +20,6 @@ const ExampleCard = ({ frontmatter }) => {
           <span className="date">{date}</span>
         </footer>
       </div>
-      Example card
     </Wrapper>
   );
 };
