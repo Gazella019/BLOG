@@ -326,3 +326,7 @@ nav .nav-container {
   height: 50vh;
   background-color: #c4ddec;
 }
+
+.blog-img {
+  border-radius: 20px;
+}

@@ -18,7 +18,6 @@ const IndexPage = () => {
       <Blog></Blog>
       <Discover></Discover>
       <ShowBlog></ShowBlog>
-      <Footer></Footer>
     </Layout>
   );
 };

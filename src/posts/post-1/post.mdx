@@ -6,7 +6,22 @@ date: 2020-05-02
 author: john smith
 category: Travel
 readTime: 50
+blogImages:
+  - ./images/img-1.jpg
+  - ./images/img-2.jpg
 ---
+
+import { Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import styled from "styled-components";
+
+<GatsbyImage
+  image={getImage(props.blogImages[0])}
+  alt="random stuff"
+  className="blog-img"
+/>
+
+<!-- ![nice](./images/img-1.jpg) -->
 
 # Backroads Tours
 
@@ -21,3 +36,7 @@ readTime: 50
 ###### h6 Heading
 
 ## Horizontal Rules
+
+<h2 type="orange">example</h2>
+
+<blockquote> blockquote !</blockquote>

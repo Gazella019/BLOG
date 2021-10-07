@@ -8,7 +8,7 @@ const blogs = ({ data }) => {
   const {
     allMdx: { nodes: blogs },
   } = data;
-  console.log(blogs);
+
   return (
     <Layout>
       <Wrapper>
