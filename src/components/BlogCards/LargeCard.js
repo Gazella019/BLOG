@@ -1,33 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
-const LargeCard = () => {
+const LargeCard = ({ title, image, excerpt, slug }) => {
   return (
     <LargeCardWrapper>
-      <div className="large-card">
-        <div className="card-img">
-          <StaticImage
-            src="../assets/blog-3.jpg"
-            layout="constrained"
-            alt="blog image"
-            placeholder="blurred"
-            className="card-img"
-            objectFit="cover"
-            // height={200}
-          />
+      <Link to={`/posts/${slug}`}>
+        <div className="large-card">
+          <div className="card-img">
+            <GatsbyImage image={getImage(image)} />
+          </div>
+          <div className="card-content">
+            <p className="metadata">APRIL 15, 2020</p>
+            <h1>{title}</h1>
+            <p>{excerpt}</p>
+            <button>READ MORE</button>
+          </div>
         </div>
-        <div className="card-content">
-          <p className="metadata">APRIL 15, 2020</p>
-          <h1>Lago di Braies</h1>
-          <p>
-            Often ignored in the mad dash to the Costa Smeralda, Olbia has more
-            to offer than first meets the eye. Look beyond its industrial
-            outskirts.
-          </p>
-          <button>READ MORE</button>
-        </div>
-      </div>
+      </Link>
     </LargeCardWrapper>
   );
 };

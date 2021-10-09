@@ -1,18 +1,23 @@
 import React from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 // import styled from "styled-components";
 
-const MediumCard = () => {
+const MediumCard = ({ title, image, excerpt, slug }) => {
   return (
-    <div className="medium-card">
-      <div className="img"></div>
-      <div className="text">
-        <h1>Card title</h1>
-        <p>
-          Click one of the social icons below to switch between card or click
-          Contact Me link to show the contact form card.
-        </p>
+    <Link to={`/posts/${slug}`}>
+      <div className="medium-card">
+        <GatsbyImage
+          image={getImage(image)}
+          alt="random stuff"
+          className="img"
+        />
+        <div className="text">
+          <h1>{title}</h1>
+          <p>{excerpt}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

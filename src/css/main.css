@@ -48,6 +48,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* Navbar section */
 
 nav {
@@ -257,7 +262,7 @@ nav .nav-container {
   display: flex;
   width: 90%;
 }
-
+/* refactor */
 .medium-card {
   width: 340px;
   height: 340px;
@@ -269,10 +274,6 @@ nav .nav-container {
 }
 
 .medium-card .img {
-  background-image: url("../assets/blog-1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   flex: 2 1 10rem;
   border-radius: 10px 10px 0 0;
   /* overflow: hidden; */

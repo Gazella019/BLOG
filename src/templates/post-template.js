@@ -11,7 +11,7 @@ const PostTemplate = ({ data }) => {
       body,
     },
   } = data;
-  console.log(data);
+
   return (
     <Layout>
       <Wrapper>
