@@ -1,7 +1,7 @@
 import React from "react";
 import LargeCard from "./BlogCards/LargeCard";
 import Title from "./Title";
-import { useStaticQuery } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 const ShowBlog = () => {
   const data = useStaticQuery(graphql`
