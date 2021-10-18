@@ -5,13 +5,16 @@ import Title from "../components/Title";
 import { StaticImage } from "gatsby-plugin-image";
 
 // Import SVGs
-// import PythonSvg from "../assets/icons/python.svg";
-// import CssSvg from "../assets/icons/css3.svg";
-// import GatsbyjsSvg from "../assets/icons/gatsbyjs.svg";
-// import HtmlSvg from "../assets/icons/html.svg";
-// import JavascriptSvg from "../assets/icons/javascript.svg";
-// import PytorchSvg from "../assets/icons/pytorch.svg";
-// import ReactSvg from "../assets/icons/react.svg";
+import PythonSvg from "../assets/icons/python.svg";
+import CssSvg from "../assets/icons/css3.svg";
+import GatsbyjsSvg from "../assets/icons/gatsbyjs.svg";
+import HtmlSvg from "../assets/icons/html.svg";
+import JavascriptSvg from "../assets/icons/javascript.svg";
+import PytorchSvg from "../assets/icons/pytorch.svg";
+import ReactSvg from "../assets/icons/react.svg";
+import NextjsSvg from "../assets/icons/nextjs.svg";
+import CSvg from "../assets/icons/c.svg";
+import CplusplusSvg from "../assets/icons/cplusplus.svg";
 
 const about = () => {
   return (
@@ -117,8 +120,14 @@ const about = () => {
               Knowledge of bus protocols and implementaion such as UART, SPI.
             </p>
             <ul>
-              <li>C</li>
-              <li>C++</li>
+              <li className="skills">
+                <img src={CSvg} className="skills-icon" />
+                <div className="skills-text">C</div>
+              </li>
+              <li className="skills">
+                <img src={CplusplusSvg} className="skills-icon" />
+                <div className="skills-text">C++</div>
+              </li>
             </ul>
           </div>
           <div className="card">
@@ -128,8 +137,14 @@ const about = () => {
               on image segmentation and image deblurring
             </p>
             <ul>
-              <li>Python</li>
-              <li>Pytorch</li>
+              <li className="skills">
+                <img src={PythonSvg} className="skills-icon" />
+                <div className="skills-text">Python</div>
+              </li>
+              <li className="skills">
+                <img src={PytorchSvg} className="skills-icon" />
+                <div className="skills-text">Pytorch</div>
+              </li>
             </ul>
           </div>
           <div className="card">
@@ -140,22 +155,33 @@ const about = () => {
             </p>
             <ul className="skill-list">
               <div>
-                <li>
-                  {/* <svg src="../assets/icons/python.svg" /> */}
-                  HTML
+                <li className="skills">
+                  <img src={HtmlSvg} className="skills-icon" />
+                  <div className="skills-text">HTML</div>
                 </li>
-                <li>CSS</li>
-                <li>Javascript</li>
+
+                <li className="skills">
+                  <img src={CssSvg} className="skills-icon" />
+                  <div className="skills-text">CSS</div>
+                </li>
+
+                <li className="skills">
+                  <img src={JavascriptSvg} className="skills-icon" />
+                  <div className="skills-text">Javascript</div>
+                </li>
               </div>
               <div>
-                <li>
-                  {/* <ReactSvg /> */}
-                  React
+                <li className="skills">
+                  <img src={ReactSvg} className="skills-icon" />
+                  <div className="skills-text">React</div>
                 </li>
-                <li>Next js</li>
-                <li>
-                  {/* <GatsbyjsSvg /> */}
-                  Gatsby js
+                <li className="skills">
+                  <img src={NextjsSvg} className="skills-icon" />
+                  <div className="skills-text">Next js</div>
+                </li>
+                <li className="skills">
+                  <img src={GatsbyjsSvg} className="skills-icon" />
+                  <div className="skills-text">Gatsby js</div>
                 </li>
               </div>
             </ul>
@@ -209,6 +235,27 @@ const Wrapper = styled.section`
         padding: 10px 0;
       }
     }
+    .skills {
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      border-radius: 5px;
+
+      .skills-icon {
+        width: 30px;
+        height: 30px;
+      }
+
+      .skills-text {
+        padding: 3px;
+      }
+
+      &:hover {
+        box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.2);
+        transition: 0.5s;
+      }
+    }
   }
 
   .experience {
@@ -247,8 +294,8 @@ const Wrapper = styled.section`
   }
   .skill-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
   }
 
   .education-list {

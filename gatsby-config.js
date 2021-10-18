@@ -34,9 +34,9 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {},
-    },
+    // {
+    //   resolve: "gatsby-plugin-react-svg",
+    //   options: {},
+    // },
   ],
 };
