@@ -88,6 +88,7 @@ const gallery = () => {
                 objectFit="cover"
                 placeholder="tracedSVG"
                 alt="gallery image"
+                imgClassName="img"
               />
             </div>
             <div className="gallery-card">
@@ -126,6 +127,18 @@ const Wrapper = styled.section`
   }
   .gallery-card {
     margin: 30px;
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  .gallery-card:hover {
+    cursor: pointer;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transform: scale(1.02);
+    /* -webkit-filter: grayscale(100%) blur(3px);
+    filter: grayscale(100%) blur(3px); */
   }
 `;
 

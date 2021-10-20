@@ -33,7 +33,7 @@ export const query = graphql`
             }
           }
           author
-          date
+          date(formatString: "MMMM Do, YYYY")
           slug
         }
         id

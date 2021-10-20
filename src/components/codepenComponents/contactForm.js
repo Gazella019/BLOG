@@ -12,22 +12,6 @@ const ContactForm = () => {
           <div class="contact-header">
             <h1>&#9135;&#9135;&#9135;&#9135;&nbsp;&nbsp;CONTACT</h1>
           </div>
-          <div class="social-bar">
-            <ul>
-              <li>
-                <i class="fab fa-facebook-f"></i>
-              </li>
-              <li>
-                <i class="fab fa-twitter"></i>
-              </li>
-              <li>
-                <i class="fab fa-instagram"></i>
-              </li>
-              <li>
-                <i class="fab fa-dribbble"></i>
-              </li>
-            </ul>
-          </div>
         </div>
         <div class="header">
           <h2>Contact Me!</h2>

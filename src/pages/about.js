@@ -23,11 +23,9 @@ const about = () => {
         {/* About me section */}
         <div className="about-me">
           <div className="about-text">
-            <h1>about.</h1>
-            I'm a product designer based in sunny Sydney, Australia. I enjoy
-            turning complex problems into simple, beautiful and intuitive
-            designs. When I'm not pushing pixels, you'll find me cooking,
-            gardening or working out in the park.
+            <h1>about.</h1>A junior software engineer located in Taipei, My
+            recent hobby is photography. This is a place to share my daily blog
+            and photo works.
           </div>
           <div className="about-image">
             <StaticImage
@@ -275,7 +273,7 @@ const Wrapper = styled.section`
   }
 
   .education {
-    background-color: #dae6e5;
+    background-color: #e3f1f0;
     padding-bottom: 120px;
     .card {
       /* background-color: burlywood; */
@@ -288,7 +286,7 @@ const Wrapper = styled.section`
         width: 400px;
       }
       .card-image {
-        background-color: #dae6e5;
+        background-color: #e3f1f0;
       }
     }
   }

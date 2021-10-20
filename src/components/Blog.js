@@ -2,6 +2,7 @@ import React from "react";
 import Title from "./Title";
 import MediumCard from "./BlogCards/MediumCard";
 import { graphql, useStaticQuery } from "gatsby";
+import styled from "styled-components";
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -16,6 +17,8 @@ const Blog = () => {
               }
             }
             slug
+            date(formatString: "MMMM Do, YYYY")
+            description
           }
           id
           excerpt
@@ -34,14 +37,13 @@ const Blog = () => {
       <div className="blog-container">
         <Title text="BLOG"></Title>
         <div className="card-section">
-          {/* refactor */}
           {posts.map((post) => {
             return (
               <MediumCard
                 key={post.id}
                 title={post.frontmatter.title}
                 image={post.frontmatter.image}
-                excerpt={post.excerpt}
+                description={post.description}
                 slug={post.frontmatter.slug}
               />
             );
@@ -52,4 +54,5 @@ const Blog = () => {
   );
 };
 
+const Wrapper = styled.div``;
 export default Blog;

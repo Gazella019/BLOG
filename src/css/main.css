@@ -82,6 +82,11 @@ nav .nav-container {
   color: black;
 }
 
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .nav-item2 {
   font-size: 1.5rem;
 }
@@ -226,7 +231,7 @@ nav .nav-container {
 
 .about-img-section {
   flex: 1 1 40rem;
-  background-color: #df9e89;
+  background-color: #faeee0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,11 +239,11 @@ nav .nav-container {
 }
 
 .about-img {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .about-img-section > div {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   position: absolute;
   /* right: 100px; */
   z-index: 10;
@@ -256,37 +261,55 @@ nav .nav-container {
 }
 
 /* Blog section */
+.blog-section {
+  background-color: rgb(250, 251, 252);
+}
 .blog-container {
   padding: 0 0 170px 0;
 }
 .card-section {
   display: flex;
-  justify-content: space-between;
-  align-items: space-between;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   display: flex;
-  width: 90%;
+  width: 80%;
+  /* color: #f3efe9; */
 }
 /* refactor */
 .medium-card {
   width: 340px;
   height: 340px;
-  background-color: rgb(235, 235, 253);
-  border-radius: 10px;
+  /* background-color: rgb(235, 235, 253); */
+  /* border-radius: 10px; */
+  margin: 50px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   box-shadow: 0px 5px 5px #c2c2c2;
 }
 
+/* @media screen and (max-width: 600px) {
+  .medium-card {
+    width: 200px;
+    height: 200px;
+  }
+} */
+
+.medium-card:hover {
+  transform: scale(1.02);
+  transition: 1s;
+}
+
 .medium-card .img {
-  flex: 2 1 10rem;
-  border-radius: 10px 10px 0 0;
+  flex: 1 1 10rem;
+  /* border-radius: 10px 10px 0 0; */
   /* overflow: hidden; */
 }
 
 .medium-card .text {
-  flex: 1 1 10rem;
-  padding: 15px;
+  flex: 3 1 10rem;
+  padding: 15px 20px;
 }
 
 .medium-card .text h1 {
@@ -327,12 +350,26 @@ nav .nav-container {
 }
 
 /* footer section */
+
 .footer-section {
   text-align: center;
   height: 50vh;
-  background-color: #c4ddec;
+  background-color: #daf1ff;
 }
 
 .blog-img {
   border-radius: 20px;
+}
+
+.mdx-section {
+  padding: 15px 20px;
+  line-height: 3rem;
+}
+
+.mdx-center {
+  text-align: center;
+}
+
+.mdx-block {
+  height: 100px;
 }

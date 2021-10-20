@@ -15,9 +15,8 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <Wrapper>
-        <h1>{title}</h1>
+        {/* <h1>{title}</h1> */}
         <MDXRenderer blogImages={blogImages}>{body}</MDXRenderer>
-        hello
       </Wrapper>
     </Layout>
   );
@@ -27,7 +26,8 @@ export const query = graphql`
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         category
-        date
+        description
+        date(formatString: "MMMM Do, YYYY")
         slug
         image {
           childImageSharp {
@@ -47,6 +47,6 @@ export const query = graphql`
 `;
 
 const Wrapper = styled.div`
-  padding: 100px;
+  padding: 100px 15vw;
 `;
 export default PostTemplate;

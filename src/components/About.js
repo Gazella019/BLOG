@@ -16,7 +16,7 @@ const About = () => {
           alt="about img"
           placeholder="none"
           objectFit="cover"
-          width={300}
+          width={450}
           className="about-img"
         />
         <div></div>

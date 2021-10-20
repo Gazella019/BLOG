@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
-const LargeCard = ({ title, image, excerpt, slug }) => {
+const LargeCard = ({ title, image, excerpt, slug, description, date }) => {
   return (
     <LargeCardWrapper>
       <Link to={`/posts/${slug}`}>
@@ -12,9 +12,9 @@ const LargeCard = ({ title, image, excerpt, slug }) => {
             <GatsbyImage image={getImage(image)} />
           </div>
           <div className="card-content">
-            <p className="metadata">APRIL 15, 2020</p>
+            <p className="metadata">{date}</p>
             <h1>{title}</h1>
-            <p>{excerpt}</p>
+            <p>{description}</p>
             <button>READ MORE</button>
           </div>
         </div>
@@ -29,7 +29,7 @@ const LargeCardWrapper = styled.section`
   .large-card {
     display: flex;
     flex-direction: row;
-    background: #eedfcc;
+    background: #f3efe9;
     box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
     margin: 50px;

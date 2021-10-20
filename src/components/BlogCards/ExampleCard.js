@@ -10,15 +10,13 @@ const ExampleCard = ({ blog }) => {
     <Wrapper>
       <GatsbyImage image={getImage(image)} alt={title} className="img" />
       <div className="info">
-        <span className="category">{category}</span>
+        {/* <span className="category">{category}</span> */}
         <h3>{title}</h3>
-        <div className="underline"></div>
+        {/* <div className="underline"></div> */}
         <Link to={`/posts/${slug}`} className="link">
           Continue Reading
         </Link>
-        <footer>
-          <span className="date">{date}</span>
-        </footer>
+        <span className="date">{date}</span>
       </div>
     </Wrapper>
   );

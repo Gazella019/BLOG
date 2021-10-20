@@ -23,13 +23,13 @@ const Wrapper = styled.div`
   }
   h1:after {
     background: none repeat scroll 0 0 transparent;
-    bottom: 5px;
+    bottom: 7px;
     content: "";
     display: block;
     height: 2px;
     left: 50%;
     position: absolute;
-    background: rgb(185, 109, 23);
+    background: black;
     transition: width 0.5s ease 0s, left 0.5s ease 0s;
     width: 0;
   }

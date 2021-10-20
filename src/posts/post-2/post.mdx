@@ -1,23 +1,52 @@
 ---
-title: How to learn web design
-slug: How-to-learn-web-design
+title: 第一篇文章!
+slug: first-post
 image: ./images/img.jpg
-date: 2020-06-03
+date: 2021-10-03
 author: john smith
 category: Code
+description: 第一版網站終於上線了!
 readTime: 50
+blogImages:
+  - ./images/img.jpg
 ---
 
-# How to learn web design
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-## h2 Heading
+<GatsbyImage
+  image={getImage(props.blogImages[0])}
+  alt="random stuff"
+  className="blog-img"
+  width={500}
+/>
 
-### h3 Heading
+<div className="mdx-center">
 
-#### h4 Heading
+# 第一版網站終於上線了!
 
-##### h5 Heading
+## 這個網站從設計到實現大概花了一個多月, 當然目前其實還有很多地方是需要修改加強的
 
-###### h6 Heading
+</div>
 
-## Horizontal Rules
+<div className="mdx-section">
+目前遇到的問題:
+
+1. 網站響應式還沒有處理好, 在大的螢幕上看是正常的, 但是很多地方用手機觀看大概排版會亂成一團, 目前是想說先上線後再來慢慢修改, 因為沒有套任何模板, 網站設計發想也是自己多看觀摩設計而來的, 所以途中一直修修改改的, 很多排版或設計語言之後還會再改
+
+2. 圖片: 目前很多圖片是取自 unsplash 這個網站, 主要是在開發 demo 時需要有暫時的圖片比較能看出網站整體的感覺, 包含 gallery 裡面很多, 之後等圖庫多了之後會全部都換成自己的作品的
+
+3. 很多東西暫時沒有 function, 像是 contact form 目前只是好看而已 XD, 技術框架主要是採用 Gatsby js 及他們所提供 Gatsby cloud 來架設
+
+4. 網域: 現在網域還是使用 gatsby cloud 提供的名稱, 之後會選好一個名字購買網域連上來, 現在其實網站名稱也還沒定案
+
+5. Markdown 內文的呈現方式, 也就是這篇文章裡面的排版, 可以再調整到更好閱讀的方式
+
+</div>
+
+<div className="mdx-section">
+
+# 接下來應該會發一些文章來介紹我是如何建立出這個網站的
+
+# 包含技術細節和推薦的資源及課程 總之總算是成功完成了初步的雛型了!
+
+</div>

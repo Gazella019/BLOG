@@ -1,13 +1,14 @@
 ---
-title: Backroads Tours
-slug: backroads-tours
+title: 怎麼建立個人部落格
+slug: how-to-build-a-perosnal-blog-site
 image: ./images/img.jpg
-date: 2020-05-02
+date: 2021-10-13
 author: john smith
 category: Travel
 readTime: 50
+description: 介紹要怎麼開始建立自己的第一個網站
 blogImages:
-  - ./images/img-1.jpg
+  - ./images/img-1.png
   - ./images/img-2.jpg
 ---
 
@@ -19,24 +20,58 @@ import styled from "styled-components";
   image={getImage(props.blogImages[0])}
   alt="random stuff"
   className="blog-img"
+  width={100}
 />
+<div className="mdx-center">gastby js 官方網站</div>
 
-<!-- ![nice](./images/img-1.jpg) -->
+<div className="mdx-block">
 
-# Backroads Tours
+</div>
 
-## h2 Heading
+<div className="mdx-center">
 
-### h3 Heading
+# 建立一個個人部落格
 
-#### h4 Heading
+## 為什麼要建立一個個人網站
 
-##### h5 Heading
+</div>
 
-###### h6 Heading
+<div className="mdx-section">
 
-## Horizontal Rules
+最一開始接觸網頁設計的原因就是希望能夠自己設計一個比較美觀的網站
+可以記錄自己學習技術的過程也可以寫一些生活的雜談和攝影照片
+後來不管是在求職還是上網查資料時，發現蠻多人都有自己的網站 常見的例如痞客邦,
+Wordpress 這些平台
 
-<h2 type="orange">example</h2>
+</div>
 
-<blockquote> blockquote !</blockquote>
+<div className="mdx-section">
+  現在要建立一個部落格有很多種方式, 也有很多方便的工具可以一鍵部署很多操作了
+  這些工具很多時候都是套 starter 的模板再來進行一些細部的客製修改
+  常見的例如:雖然可以自行更改細節,但往往還是沒辦法跳脫出不同之處
+  我想建立一個可以方便深度客製化的網站,
+  每個元件分頁都可以自行設定不需要被平台工具限制
+</div>
+
+<div className="mdx-section">
+  其實在碩士畢業後到當兵的暑假自己就有嘗試摸索也設計出了一個網站並部署在 Github
+  pages 上了 成果自己看起來覺得還不錯, 但是主要比較大的問題是 github
+  上面只能部署靜態網頁 也就是說沒有後端這些的功能可以架設,
+  當時用的方式是將部落格的文章寫在 medium 上, 再透過連結指過去 當時沒有接觸過
+  React 這項技術, 後來發現透過 React 和 React router 這些工具可以架設一個 SPA
+  (single-page website) 然後又發現了 gatsby js 這個網站可以很方便的用 React
+  開發網站 所以就選擇使用 gatsby 來重新打造一個新的個人網站且包含了內建 markdown
+  編輯的部落文章還可以分享一些攝影照片
+</div>
+
+<div className="mdx-section">
+  Gatsby js 可以很方便的建立 static generate
+  website,這類網站的好處是執行速度很快 真的超級快的,
+  可以點看看每個分頁原因是這類網站不會向後端請求資料,而是把所有需要的資訊都在建立時就包在一起了
+  另外 gatsby js 也提供很多方便的功能, 例如針對 Image 的優化及很快速方便的 page
+  功能 不過 Gatsby js 相較於其他比較難入手的原因是因為需要有 React 相關知識,
+  這部分要先學會 React 後再來使用會比較方便 如果到這邊有興趣的話推薦可以參考
+  gatsby js 官方網站的教學
+  我覺得教學文件寫得很好而且詳細,當中會一步一步帶你建立一個基本 blog 的功能
+  剛好可以做為很棒的參考!
+</div>

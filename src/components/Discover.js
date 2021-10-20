@@ -18,9 +18,8 @@ const Discover = () => {
         </div>
 
         <div className="discover-text">
-          <h1>Discover</h1>
-          <h1>Our</h1>
-          <h1>Story</h1>
+          <h1>Personal</h1>
+          <h1>Blog</h1>
         </div>
       </Wrapper>
     </div>
