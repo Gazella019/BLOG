@@ -25,14 +25,14 @@ const HeroSlider = () => {
     }
   };
   return (
-    <div className="hero">
+    <div className="hero-section">
       {current === 0 && (
         <div className="hero-card">
           <div className="hero-img-1" />
           <div className="hero-description">
             <div className="title">
               Germany
-              <div className="divider"></div>
+              {/* <div className="divider"></div> */}
             </div>
             <p>
               The German National Tourist Board presents Germany as a travel
@@ -60,7 +60,7 @@ const HeroSlider = () => {
           <div className="hero-description">
             <div className="title">
               Island
-              <div className="divider"></div>
+              {/* <div className="divider"></div> */}
             </div>
             <p>
               A road trip from Nevada to Arizona and California. The path of the
@@ -88,7 +88,7 @@ const HeroSlider = () => {
           <div className="hero-description">
             <div className="title">
               French
-              <div className="divider"></div>
+              {/* <div className="divider"></div> */}
             </div>
             <p>
               Fuga temporibus provident molestias culpa nostrum error cum

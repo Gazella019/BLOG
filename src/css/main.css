@@ -60,11 +60,10 @@ a {
 
 /* Navbar section */
 
-nav {
+/* nav {
   margin: auto;
   font-family: "Asul", sans-serif;
   background-color: #f5f5f4;
-  /* font-family: "Allison", cursive; */
 }
 
 nav .nav-container {
@@ -94,12 +93,11 @@ nav .nav-container {
 .nav-item1,
 .nav-item3 {
   font-size: 0.8rem;
-}
+} */
 
 /* Hero section */
 
 .hero-section {
-  height: 80vh;
   width: 100%;
 }
 .hero-card {
@@ -155,7 +153,7 @@ nav .nav-container {
   font-weight: 300;
 }
 
-.hero-description p {
+.hero-text {
   font-size: 1.2rem;
   font-weight: 100;
 }
@@ -166,6 +164,17 @@ nav .nav-container {
   position: relative;
 }
 
+@media (max-width: 500px) {
+  .hero-description .title {
+    font-size: 1rem;
+    /* color: blueviolet; */
+  }
+  .hero-description {
+    width: 180px;
+    font-size: 0.6rem;
+    /* color: blueviolet; */
+  }
+}
 .divider {
   position: absolute;
   width: 150px;
@@ -208,7 +217,7 @@ nav .nav-container {
 
 /* About section */
 
-.about-section {
+/* .about-section {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -243,22 +252,17 @@ nav .nav-container {
 }
 
 .about-img-section > div {
-  /* background-color: aquamarine; */
   position: absolute;
-  /* right: 100px; */
   z-index: 10;
 }
 .about-img::after {
   content: "";
   position: absolute;
-  /* top: -20px;
-  right: -20px; */
   height: 6rem;
   width: 100%;
   background-color: rgb(185, 109, 23);
   transform: translateX(50px%);
-  /* z-index: -1; */
-}
+} */
 
 /* Blog section */
 .blog-section {
@@ -278,10 +282,9 @@ nav .nav-container {
 }
 /* refactor */
 .medium-card {
-  width: 340px;
-  height: 340px;
-  /* background-color: rgb(235, 235, 253); */
+  background-color: rgb(235, 235, 253);
   /* border-radius: 10px; */
+  flex: 1 1 20rem;
   margin: 50px;
   display: flex;
   flex-direction: column;
@@ -351,7 +354,7 @@ nav .nav-container {
 
 /* footer section */
 
-.footer-section {
+/* .footer-section {
   text-align: center;
   height: 50vh;
   background-color: #daf1ff;
@@ -372,4 +375,4 @@ nav .nav-container {
 
 .mdx-block {
   height: 100px;
-}
+} */

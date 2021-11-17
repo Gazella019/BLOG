@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-const LinkComponent = ({ link, color, children }) => {
+const LinkComponent = ({ link, color, text }) => {
   return (
     <Wrapper>
       <Link to={link} className="links">
-        {children}
+        <p>{text}</p>
       </Link>
     </Wrapper>
   );
@@ -39,6 +39,10 @@ const Wrapper = styled.div`
     left: 0;
   }
   text-align: center;
+  /* padding: 10px; */
   padding: 0 20px;
+  /* @media (max-width: 800px) {
+    padding: 2px;
+  } */
 `;
 export default LinkComponent;

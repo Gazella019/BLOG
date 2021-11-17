@@ -18,8 +18,8 @@ const Discover = () => {
         </div>
 
         <div className="discover-text">
-          <h1>Personal</h1>
-          <h1>Blog</h1>
+          <h1>Personal / </h1>
+          <h1> Blog </h1>
         </div>
       </Wrapper>
     </div>
@@ -31,18 +31,22 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: bisque;
+  flex-wrap: wrap;
   height: 100%;
   .discover-img-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1 1 10rem;
+    flex: 1 1 20rem;
     /* background-color: brown; */
   }
   .discover-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* background-color: burlywood; */
     width: 100%;
-    flex: 1 1 10rem;
+    flex: 1 1 20rem;
   }
 `;
 export default Discover;

@@ -15,7 +15,7 @@ const LargeCard = ({ title, image, excerpt, slug, description, date }) => {
             <p className="metadata">{date}</p>
             <h1>{title}</h1>
             <p>{description}</p>
-            <button>READ MORE</button>
+            <div className="button">READ MORE</div>
           </div>
         </div>
       </Link>
@@ -28,6 +28,7 @@ const LargeCardWrapper = styled.section`
   /* padding: 5px 5px; */
   .large-card {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     background: #f3efe9;
     box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.2);
@@ -35,14 +36,14 @@ const LargeCardWrapper = styled.section`
     margin: 50px;
   }
   .card-img {
-    flex: 1 1 10rem;
+    flex: 1 1 20rem;
   }
   .card-content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex: 1 1 10rem;
+    flex: 1 1 20rem;
     padding: 30px;
     .metadata {
       padding: 5px 0;
@@ -53,12 +54,13 @@ const LargeCardWrapper = styled.section`
     h1 {
       padding: 5px 0;
     }
-    button {
+    .button {
       margin-top: 20px;
       background: #eedfcc;
       border: 1px solid black;
       width: 35%;
       padding: 15px 5px;
+      text-align: center;
       cursor: pointer;
       &:hover {
         background: #d8cab7;
@@ -66,6 +68,21 @@ const LargeCardWrapper = styled.section`
       }
     }
   }
+
+  @media screen and (max-width: 700px) {
+    .card-content {
+      p {
+        padding: 10px 0;
+      }
+      h1 {
+        padding: 5px 0;
+      }
+      .button {
+        display: none;
+      }
+    }
+  }
+
   width: 80%;
   margin: 0 auto;
   font-size: 0.6rem;

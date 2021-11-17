@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <div className="footer footer-left">
-        <LinkComponent link="/">Home</LinkComponent>
-        <LinkComponent link="/about">About</LinkComponent>
-        <LinkComponent link="/blog">Blog</LinkComponent>
+        <LinkComponent link="/" text="Home"></LinkComponent>
+        <LinkComponent link="/about" text="About"></LinkComponent>
+        <LinkComponent link="/blog" text="Blog"></LinkComponent>
       </div>
       <div className="footer footer-mid"></div>
       <div className="footer footer-right">
